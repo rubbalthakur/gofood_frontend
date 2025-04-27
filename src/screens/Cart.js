@@ -18,17 +18,20 @@ export default function Cart() {
       alert("please log in again");
       return;
     }
-    let response = await fetch("http://localhost:5000/api/orderData", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        order_data: data,
-        email: userEmail,
-        order_date: new Date().toDateString(),
-      }),
-    });
+    let response = await fetch(
+      "https://gofood-backend-appa.onrender.com/api/orderData",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          order_data: data,
+          email: userEmail,
+          order_date: new Date().toDateString(),
+        }),
+      }
+    );
     if (response.status === 200) {
       dispatch({ type: "DROP" });
     }
