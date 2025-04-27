@@ -28,20 +28,22 @@ export default function Login() {
     if (json.success) {
       localStorage.setItem("userEmail", credentials.email);
       localStorage.setItem("authToken", json.authToken);
-      console.log(localStorage.getItem("authToken"));
       navigate("/");
     }
   };
 
   const handleDemoLogin = async () => {
     const demoCredentials = { email: "guglu@gmail.com", password: "guglu" };
-    const response = await fetch("http://localhost:5000/api/loginuser", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(demoCredentials),
-    });
+    const response = await fetch(
+      "https://gofood-backend-appa.onrender.com/api/loginuser",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(demoCredentials),
+      }
+    );
     const json = await response.json();
     console.log(json);
     if (!json.success) {
@@ -50,7 +52,6 @@ export default function Login() {
     if (json.success) {
       localStorage.setItem("userEmail", demoCredentials.email);
       localStorage.setItem("authToken", json.authToken);
-      console.log(localStorage.getItem("authToken"));
       navigate("/");
     }
   };
