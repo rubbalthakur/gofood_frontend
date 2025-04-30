@@ -25,7 +25,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    alert("As I am using free backend server sometimes it stops due to inactivity, In this case please reload the page again in 2 minutes");
     loadData();
   }, []);
 
@@ -157,6 +156,9 @@ export default function Home() {
             );
           })
         ) : (
+          { foodItem.length===0 && alert(
+              "As I am using free backend server sometimes it stops due to inactivity, In this case please reload the page again in 2 minutes"
+            )}
           <div>*********************</div>
         )}
       </div>
