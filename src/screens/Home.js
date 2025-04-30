@@ -22,13 +22,10 @@ export default function Home() {
 
     setFoodItem(response[0]);
     setFoodCat(response[1]);
-    if(!(foodItem.length > 0)){
-      alert("As I am using free backend server sometimes it stops due to inactivity, In this case please reload the page again in 2 minutes");
-    }
   };
 
   useEffect(() => {
-    loadData()
+    loadData();
   }, []);
 
   return (
@@ -159,7 +156,7 @@ export default function Home() {
             );
           })
         ) : (
-          <div>************backend server sometimes it stops due to inactivity, In this case please reload the page again in 2 minutes*********</div>
+          <div>**Backend server become idle due to inactivity please reload in 2 minutes***</div>
         )}
       </div>
       <div>
