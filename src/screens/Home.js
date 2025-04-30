@@ -24,6 +24,7 @@ export default function Home() {
     setFoodCat(response[1]);
     if(!(foodItem.length > 0)){
       alert("As I am using free backend server sometimes it stops due to inactivity, In this case please reload the page again in 2 minutes");
+    }
   };
 
   useEffect(() => {
