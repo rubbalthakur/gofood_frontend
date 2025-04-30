@@ -25,7 +25,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    alert("As I am using free server it sometimes stops due to inactivity, In this case please reload the page again in 2 minutes");
+    alert("As I am using free backend server sometimes it stops due to inactivity, In this case please reload the page again in 2 minutes");
     loadData();
   }, []);
 
