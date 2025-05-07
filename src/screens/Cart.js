@@ -49,7 +49,7 @@ export default function Cart() {
               <th scope="col">Amount</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody style={{color:'white'}}>
             {data.map((food, index) => (
               <tr>
                 <th scope="row">{index + 1}</th>
