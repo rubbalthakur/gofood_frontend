@@ -37,7 +37,7 @@ export default function Cart() {
     }
   };
   return (
-    <div>
+    <div style={{color:white}}>
       <div className="container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md">
         <table className="table table-hover">
           <thead className="text-success fs-4">
