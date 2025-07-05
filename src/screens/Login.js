@@ -103,7 +103,7 @@ export default function Login() {
           className="btn btn-secondary"
           onClick={handleDemoLogin}
         >
-          Login to test
+          Login with testing account
         </button>
       </form>
     </div>
