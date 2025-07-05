@@ -33,14 +33,14 @@ export default function Signup() {
       navigate("/login");
     }
     if (!json.success) {
-      alert("Enter valid credentials");
+      alert(json.errors || "Enter valid credentials");
     }
   };
   const onChange = (event) => {
     setcredentials({ ...credentials, [event.target.name]: event.target.value });
   };
   return (
-    <div className="container">
+    <div className="container  text-white" style={{ height: "100vh" }}>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">

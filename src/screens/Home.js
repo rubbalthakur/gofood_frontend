@@ -123,10 +123,10 @@ export default function Home() {
           foodCat.map((data) => {
             return (
               <div className="row mb-3">
-                <div key={data._id} className="fs-3 m-3">
+                <div key={data._id} className="fs-3 m-3 text-white">
                   {data.CategoryName}
                 </div>
-                <hr />
+                <hr className="text-white" />
                 {foodItem.length !== 0 ? (
                   foodItem
                     .filter(

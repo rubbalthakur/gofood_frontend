@@ -39,7 +39,7 @@ export default function Cart() {
   return (
     <div>
       <div className="container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md">
-        <table className="table table-hover">
+        <table className="table ">
           <thead className="text-success fs-4">
             <tr>
               <th scope="col">#</th>
@@ -49,7 +49,7 @@ export default function Cart() {
               <th scope="col">Amount</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-white">
             {data.map((food, index) => (
               <tr>
                 <th scope="row">{index + 1}</th>
@@ -58,7 +58,15 @@ export default function Cart() {
                 <td>{food.size}</td>
                 <td>{food.price}</td>
                 <td>
-                  <button type="button" className="btn p-0">
+                  <button
+                    type="button"
+                    className="btn p-0 "
+                    style={{
+                      border: "1px solid white",
+                      color: "white",
+                      backgroundColor: "red",
+                    }}
+                  >
                     <span
                       onClick={async () => {
                         await dispatch({ type: "REMOVE", index: index });

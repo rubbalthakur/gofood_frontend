@@ -44,9 +44,9 @@ export default function MyOrder() {
                           return (
                             <div>
                               {arrayData.Order_date ? (
-                                <div className="m-auto mt-5">
+                                <div className="m-auto mt-5 text-white">
                                   {(data = arrayData.Order_date)}
-                                  <hr />
+                                  <hr className="text-white" />
                                 </div>
                               ) : (
                                 <div className="col-12 col-md-6 col-lg-3">

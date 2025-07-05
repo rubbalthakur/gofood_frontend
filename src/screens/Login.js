@@ -61,7 +61,7 @@ export default function Login() {
   };
 
   return (
-    <div className="container">
+    <div className="container  text-white" style={{ height: "100vh" }}>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
