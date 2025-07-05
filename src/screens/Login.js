@@ -23,7 +23,7 @@ export default function Login() {
     const json = await response.json();
     console.log(json);
     if (!json.success) {
-      alert("Enter valid credentials");
+      alert(json.errors || "Enter valid credentials");
     }
     if (json.success) {
       localStorage.setItem("userEmail", credentials.email);
@@ -45,9 +45,8 @@ export default function Login() {
       }
     );
     const json = await response.json();
-    console.log(json);
     if (!json.success) {
-      alert("Demo login failed");
+      alert(json.errors || "login failed");
     }
     if (json.success) {
       localStorage.setItem("userEmail", demoCredentials.email);
@@ -104,7 +103,7 @@ export default function Login() {
           className="btn btn-secondary"
           onClick={handleDemoLogin}
         >
-          Login as Demo User
+          Login to test
         </button>
       </form>
     </div>
