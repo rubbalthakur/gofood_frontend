@@ -156,7 +156,10 @@ export default function Home() {
             );
           })
         ) : (
-          <div>**Backend server become idle due to inactivity please reload in 2 minutes***</div>
+          <div className="text-red">
+            **Backend server become idle due to inactivity please reload in 2
+            minutes***
+          </div>
         )}
       </div>
       <div>
